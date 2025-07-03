@@ -1,0 +1,172 @@
+:root {
+    /* Color Variables */
+    --color-primary: #222222;
+    --color-secondary: #7b7b7b;
+    --color-base: #f8f8f8;
+    --color-white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Aeonik";
+    src: url("https://db.onlinewebfonts.com/t/0927e08fbdf95205b63c5b8774adeef6.eot");
+    src: url("https://db.onlinewebfonts.com/t/0927e08fbdf95205b63c5b8774adeef6.eot?#iefix")format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/0927e08fbdf95205b63c5b8774adeef6.woff2")format("woff2"), url("https://db.onlinewebfonts.com/t/0927e08fbdf95205b63c5b8774adeef6.woff")format("woff"), url("https://db.onlinewebfonts.com/t/0927e08fbdf95205b63c5b8774adeef6.ttf")format("truetype"), url("https://db.onlinewebfonts.com/t/0927e08fbdf95205b63c5b8774adeef6.svg#Aeonik TRIAL")format("svg");
+}
+
+body {
+    font-family: 'Aeonik', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    width: 1250px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+
+/* header start  */
+
+header {
+    background-color: var(--color-base);
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-logo img {
+    max-width: 120px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    transition: color 0.2s ease;
+    color: var(--color-primary);
+}
+
+.main-nav a:hover,
+.main-nav a:focus,
+.main-nav a:active {
+    color: var(--color-secondary);
+}
+
+.custm-btn-1 {
+    text-decoration: underline;
+}
+
+
+/* header end  */
+
+.swiper-portfolio-1 .swiper-slide {
+    width: 60%;
+}
+
+
+/* image overlay btn start */
+
+.img-overly-image {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.img-overly-image img {
+    width: 100%;
+    display: block;
+}
+
+.img-overly-image button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.img-overly-image:hover button {
+    opacity: 1;
+}
+
+
+/* image overlay end  */
+
+
+/* accordin start  */
+
+.accord-box {
+    margin-top: 30px;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+    padding: 15px 20px;
+    background-color: #f9f9f9;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #efefef;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 15px 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.9s ease, opacity 0.9s ease, visibility 0.9s ease;
+}
+
+.accordion-item:hover .accordion-content {
+    max-height: 300px;
+    /* adjust based on your content */
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* accordin end  */
